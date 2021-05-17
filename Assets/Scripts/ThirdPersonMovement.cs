@@ -6,10 +6,6 @@ public class ThirdPersonMovement : MonoBehaviour
 {
     public Transform respawnPoint;
 
-    public GameObject CanvasObject;
-
-    public bool Ativar = false;
-
     public CharacterController controller; //Referencias
     public Transform cam; //Referencias
 
@@ -114,12 +110,6 @@ public class ThirdPersonMovement : MonoBehaviour
             if (Input.GetKey((KeyCode.R)))
                 Restart();
 
-            if (Input.GetButtonDown("Cancel"))
-            {
-                Application.Quit();
-                Debug.Log("Fechando");
-            }
-
         }
 
     }
@@ -135,5 +125,4 @@ public class ThirdPersonMovement : MonoBehaviour
         isDied = true;
         respawnPoint = respawnTransform;
     }
-
 }
